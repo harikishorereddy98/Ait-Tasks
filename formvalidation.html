@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form_validation</title>
+</head>
+<body>
+    <form action="message.html" onsubmit="validate()"> 
+    <label for="firstname">firstname</label>
+    <input id="firstname" name="firstname" type="text"><br><br>
+    <label for="lastname">lastname</label>
+    <input id="lastname" name="lastname" type="text"><br><br>
+    <label for="email">email</label>
+    <input id="email" name="email" type="email"><br><br>
+    <label for="contact">contact</label>
+    <input id="contact" name="contact" type="tel"><br><br>
+    <label for="password">password</label>
+    <input id="password" name="password" type="password"><br><br>
+    <button type="submit">submit</button>
+    <script>
+        function validateform(){
+            var firstname = document.getElementById("firstname");
+            var lastname = document.getElementById("lastname");
+            var email = document.getElementById("email");
+            var contact = document.getElementById("contact");
+            var password= document.getElementById("password");
+            if(firstname.length <= 4||firstname.length >= 10){
+                alert("firstname must be minimum 4 characters and maximum 10 characters")
+            }
+            if(lastname.length <= 4||lastname.length >= 10){
+                alert("firstname must be minimum 4 characters and maximum 10 characters")
+            }
+            if(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/){
+                alert("must be one upper and lowercase letter and one number and special character")
+            }
+            if(/^\(?([6-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/){
+                alert("contact must be minimum 4 and maximum 10 numbers")
+            }
+            if(/^[A-Za-z]\w{7,14}$/){
+                alert("password must be minimum 8letters and atleast one upper and lowercase and special chracter")
+            }
+        }
+    </script>
+</form>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duplicate</title>
+</head>
+<body>
+    <script>
+      debugger
+const str= ("achieversit")
+
+let duplicates = []
+
+const tempstr= [...str].sort()
+
+for (let i = 0; i < tempstr.length; i++) {
+  if (tempstr[i + 1] === tempstr[i]) {
+    duplicates.push(tempstr[i])
+  }
+}
+
+console.log(duplicates)
+    </script>
+</body>
+</html>

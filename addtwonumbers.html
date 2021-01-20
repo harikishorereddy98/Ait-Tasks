@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>twonumadd</title>
+</head>
+<body>
+<script>
+var arr,i,j,n,newArray;
+	  arr = [2,3,5, 7,9,0];
+       newArray=[];
+	 
+	 function set(a,n){
+
+	 for(i=0;i<a.length;i++){
+	 for(j=i+1;j<a.length;j++){
+
+	 		if(a[i] +a[j]==n){
+ 
+          newArray.push([a[i],a[j]]); 
+	 		}
+	 	}
+	 }
+}
+set(arr, 10);
+console.log(newArray);
+</script>
+</body>
+</html>

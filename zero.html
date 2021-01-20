@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a,b;
+        let scores = [23,8,0,8,77,0,11,0];
+        let lenOfArr = scores.length;
+        let count = 0;
+        let newArr = [];
+        for(let val of scores){
+            if(val!==0){
+              newArr.push(val);
+              count++;
+            }
+        }
+        while(count < lenOfArr){
+
+            newArr.push(0);
+            count++;
+        }
+        console.log(newArr);
+    </script>
+</body>
+</html>
